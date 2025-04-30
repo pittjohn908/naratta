@@ -1,0 +1,7 @@
+services:
+  server:
+    build: 
+    container_name: naratta-server
+    restart: on-failure
+    ports:
+      - "8000:8000"

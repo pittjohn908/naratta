@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-router = APIRouter(prefix="novels")
+router = APIRouter(prefix="/novels")
 
 
 @router.post("/", response_model=[])
