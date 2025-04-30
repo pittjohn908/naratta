@@ -1,6 +1,4 @@
-from typing import Annotated
-
-from fastapi import APIRouter, File, UploadFile
+from fastapi import APIRouter, UploadFile
 
 from app.services.epub.epub import EBook
 
