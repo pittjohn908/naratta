@@ -6,6 +6,12 @@ from typing import Optional
 from pathlib import Path
 from xml.etree import ElementTree
 
+from fastapi import UploadFile
+
+
+class InMemoryExtractor:
+    def __init__(self, file: UploadFile):
+        self.file = file
 
 class Extractor:
     def __init__(self, epub_path: str):
