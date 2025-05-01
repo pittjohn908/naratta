@@ -10,9 +10,10 @@ RUN uv venv /server/.venv
 ENV VIRTUAL_ENV=/server/.venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-# COPY .python-version pyproject.toml uv.lock .env /server/
-COPY .python-version pyproject.toml uv.lock /server/
+COPY .python-version pyproject.toml uv.lock alembic.ini /server/
+COPY .env/.env /server/.env/
 COPY app /server/app
+COPY migrations /server/migrations
 
 RUN uv sync --frozen
 
