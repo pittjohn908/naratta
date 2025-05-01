@@ -11,7 +11,7 @@ class NarattaConfig(BaseSettings):
     database_url: str = Field(default="", description="Postgres Database URL")
 
     # LOAD CONFIG THROUGH ENV FILE
-    model_config = SettingsConfigDict(env_file=".env/.env", env_file_encoding="utf-8")
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
 
 @lru_cache(maxsize=1)
